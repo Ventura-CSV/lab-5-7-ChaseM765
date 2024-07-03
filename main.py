@@ -1,10 +1,13 @@
 
 def splitlist(numbers):
-    """
-    ########################################
-    Code Your Program here
-    ########################################
-    """
+    first = numbers[0]
+    for x in numbers:
+        if x < first:
+            first = x
+    numbers.remove(first)
+    return first, numbers
+    
+    
 
 
 def main():
