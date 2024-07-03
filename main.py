@@ -4,7 +4,9 @@ def splitlist(numbers):
     for x in numbers:
         if x < first:
             first = x
+    
     numbers.remove(first)
+    
     return first, numbers
     
     
