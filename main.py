@@ -1,12 +1,19 @@
 
 def splitlist(numbers):
-    first = numbers[0]
-    for x in numbers:
-        if x < first:
-            first = x
+    first = min(numbers)
+    ind = numbers.index(first)
     mem = numbers[0]
-    numbers[0] = numbers[4]
-    numbers[4] = mem
+    numbers[0] = numbers[ind]
+    numbers[ind] = mem
+    
+    #first = numbers[0]
+    #for x in numbers:
+    #    if x < first:
+    #        first = x
+    
+    #mem = numbers[0]
+    #numbers[0] = numbers[4]
+    #numbers[4] = mem
     numbers.remove(first)
     
     return first, numbers
